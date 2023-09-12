@@ -1,67 +1,548 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+    <!--==================== UNICONS ====================-->
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+    <!--TO DO -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/">
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="test test test">
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="webpag">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/x_icon" href="favicon.ico"/>
-
-  <title>webpag</title>
-  <link rel="manifest" href="manifest.json">
-
-  <script>
-    // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "1122449314";
-  </script>
-  <!-- This script adds the flutter initialization JS code -->
-  <script src="flutter.js" defer></script>
-
-  <meta charset="UTF-8">
-  <meta name="description" content="HeartBreakOne page built with Flutter">
-  <meta name="keywords" content="Flutter, HeartBreakOne">
-  <meta name="author" content="Leonardo Luiz">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HeartBreakOne</title>
-  <script defer src="main.dart.js" type="application/javascript"></script>
+    <title>Leonardo Luiz</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 </head>
+
 <body>
-  <script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
-        }
-      });
-    });
-  </script>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav nav__container">
+            <a href="#" class="nav__logo">Leonardo Luiz</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class="uil uil-home nav__icon"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i> About
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="uil uil-briefcase nav__icon"></i> Skills
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#qualifications" class="nav__link">
+                            <i class="uil uil-briefcase nav__icon"></i> Qualifications
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link">
+                            <i class="uil uil-briefcase nav__icon"></i> Projects
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i> Contact me
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
+            <div class="nav__btns">
+
+                <!-- THEME CHANGE BUTTON-->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section home__section" id="home">
+            <div class="home__container container ">
+                <div class="home__content home__grid">
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/leonardocluiz/" target="_blank" class="home__social-icon">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>
+                        <a href="https://github.com/Heart-BreakOne" target="_blank" class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                        <a href="mailto:lcoutinholuiz@gmail.com" target="_blank" class="home__social-icon">
+                            <i class="uil-envelope-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__data">
+                        <h1 class="home__title">Welcome, <br>I'm Leonardo Luiz</h1>
+                        <h3 class="home__subtitle">I make android and iOS apps</h3>
+
+                        <a href="#contact" class="button button--flex contact__me-button">
+                            Contact me <i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__img">
+                        <svg class="home__blob" fill="#000000" version="1.1" id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 512.424 512.424" xml:space="preserve">
+
+                            <mask id="mask0" mask-type="alpha">
+                                <path d="M500.424,168.212c6.624,0,12-5.372,12-12c0-6.624-5.376-12-12-12h-44.212v-16h44.212c6.624,0,12-5.376,12-12
+                                    c0-6.628-5.376-12-12-12h-44.212v-3.88c-4-27.848-19.728-44.12-43.992-44.12h-4.008V12c0-6.624-5.376-12-12-12
+                                    c-6.632,0-12,5.376-12,12v44.212h-16V12c0-6.624-5.376-12-12-12c-6.632,0-12,5.376-12,12v44.212h-16V12c0-6.624-5.376-12-12-12
+                                    c-6.632,0-12,5.376-12,12v44.212h-16V12c0-6.624-5.376-12-12-12c-6.632,0-12,5.376-12,12v44.212h-16V12c0-6.624-5.376-12-12-12
+                                    c-6.632,0-12,5.376-12,12v44.212h-16V12c0-6.624-5.376-12-12-12c-6.632,0-12,5.376-12,12v44.212h-16V12c0-6.624-5.376-12-12-12
+                                    c-6.632,0-12,5.376-12,12v44.212h-16V12c0-6.624-5.376-12-12-12c-6.632,0-12,5.376-12,12v44.212h-3.984
+                                    c-24.26,0-44.016,19.86-44.016,44.12v3.88H12c-6.632,0-12,5.372-12,12c0,6.624,5.368,12,12,12h44.212v16H12
+                                    c-6.632,0-12,5.376-12,12c0,6.628,5.368,12,12,12h44.212v16H12c-6.632,0-12,5.372-12,12c0,6.624,5.368,12,12,12h44.212v16H12
+                                    c-6.632,0-12,5.372-12,12c0,6.624,5.368,12,12,12h44.212v16H12c-6.632,0-12,5.376-12,12c0,6.628,5.368,12,12,12h44.212v16H12
+                                    c-6.632,0-12,5.372-12,12s5.368,12,12,12h44.212v16H12c-6.632,0-12,5.376-12,12c0,6.628,5.368,12,12,12h44.212v16H12
+                                    c-6.632,0-12,5.372-12,12c0,6.624,5.368,12,12,12h44.212v4.112c0,24.264,19.756,43.888,44.016,43.888h3.984v44.212
+                                    c0,6.624,5.368,12,12,12c6.624,0,12-5.376,12-12v-44.212h16v44.212c0,6.624,5.368,12,12,12c6.624,0,12-5.376,12-12v-44.212h16
+                                    v44.212c0,6.624,5.368,12,12,12c6.624,0,12-5.376,12-12v-44.212h16v44.212c0,6.624,5.368,12,12,12c6.624,0,12-5.376,12-12v-44.212
+                                    h16v44.212c0,6.624,5.368,12,12,12c6.624,0,12-5.376,12-12v-44.212h16v44.212c0,6.624,5.368,12,12,12c6.624,0,12-5.376,12-12
+                                    v-44.212h16v44.212c0,6.624,5.368,12,12,12c6.624,0,12-5.376,12-12v-44.212h16v44.212c0,6.624,5.368,12,12,12
+                                    c6.624,0,12-5.376,12-12v-44.212h4.008c24.264,0,43.992-19.624,43.992-43.888v-4.112h44.212c6.624,0,12-5.376,12-12
+                                    c0-6.628-5.376-12-12-12h-44.212v-16h44.212c6.624,0,12-5.372,12-12c0-6.624-5.376-12-12-12h-44.212v-16h44.212
+                                    c6.624,0,12-5.372,12-12s-5.376-12-12-12h-44.212v-16h44.212c6.624,0,12-5.372,12-12c0-6.624-5.376-12-12-12h-44.212v-16h44.212
+                                    c6.624,0,12-5.376,12-12c0-6.628-5.376-12-12-12h-44.212v-16h44.212c6.624,0,12-5.376,12-12c0-6.628-5.376-12-12-12h-44.212v-16
+                                    H500.424z" />
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path d="M500.424,168.212c6.624,0,12-5.372,12-12c0-6.624-5.376-12-12-12h-44.212v-16h44.212c6.624,0,12-5.376,12-12
+                                    c0-6.628-5.376-12-12-12h-44.212v-3.88c-4-27.848-19.728-44.12-43.992-44.12h-4.008V12c0-6.624-5.376-12-12-12
+                                    c-6.632,0-12,5.376-12,12v44.212h-16V12c0-6.624-5.376-12-12-12c-6.632,0-12,5.376-12,12v44.212h-16V12c0-6.624-5.376-12-12-12
+                                    c-6.632,0-12,5.376-12,12v44.212h-16V12c0-6.624-5.376-12-12-12c-6.632,0-12,5.376-12,12v44.212h-16V12c0-6.624-5.376-12-12-12
+                                    c-6.632,0-12,5.376-12,12v44.212h-16V12c0-6.624-5.376-12-12-12c-6.632,0-12,5.376-12,12v44.212h-16V12c0-6.624-5.376-12-12-12
+                                    c-6.632,0-12,5.376-12,12v44.212h-16V12c0-6.624-5.376-12-12-12c-6.632,0-12,5.376-12,12v44.212h-3.984
+                                    c-24.26,0-44.016,19.86-44.016,44.12v3.88H12c-6.632,0-12,5.372-12,12c0,6.624,5.368,12,12,12h44.212v16H12
+                                    c-6.632,0-12,5.376-12,12c0,6.628,5.368,12,12,12h44.212v16H12c-6.632,0-12,5.372-12,12c0,6.624,5.368,12,12,12h44.212v16H12
+                                    c-6.632,0-12,5.372-12,12c0,6.624,5.368,12,12,12h44.212v16H12c-6.632,0-12,5.376-12,12c0,6.628,5.368,12,12,12h44.212v16H12
+                                    c-6.632,0-12,5.372-12,12s5.368,12,12,12h44.212v16H12c-6.632,0-12,5.376-12,12c0,6.628,5.368,12,12,12h44.212v16H12
+                                    c-6.632,0-12,5.372-12,12c0,6.624,5.368,12,12,12h44.212v4.112c0,24.264,19.756,43.888,44.016,43.888h3.984v44.212
+                                    c0,6.624,5.368,12,12,12c6.624,0,12-5.376,12-12v-44.212h16v44.212c0,6.624,5.368,12,12,12c6.624,0,12-5.376,12-12v-44.212h16
+                                    v44.212c0,6.624,5.368,12,12,12c6.624,0,12-5.376,12-12v-44.212h16v44.212c0,6.624,5.368,12,12,12c6.624,0,12-5.376,12-12v-44.212
+                                    h16v44.212c0,6.624,5.368,12,12,12c6.624,0,12-5.376,12-12v-44.212h16v44.212c0,6.624,5.368,12,12,12c6.624,0,12-5.376,12-12
+                                    v-44.212h16v44.212c0,6.624,5.368,12,12,12c6.624,0,12-5.376,12-12v-44.212h16v44.212c0,6.624,5.368,12,12,12
+                                    c6.624,0,12-5.376,12-12v-44.212h4.008c24.264,0,43.992-19.624,43.992-43.888v-4.112h44.212c6.624,0,12-5.376,12-12
+                                    c0-6.628-5.376-12-12-12h-44.212v-16h44.212c6.624,0,12-5.372,12-12c0-6.624-5.376-12-12-12h-44.212v-16h44.212
+                                    c6.624,0,12-5.372,12-12s-5.376-12-12-12h-44.212v-16h44.212c6.624,0,12-5.372,12-12c0-6.624-5.376-12-12-12h-44.212v-16h44.212
+                                    c6.624,0,12-5.376,12-12c0-6.628-5.376-12-12-12h-44.212v-16h44.212c6.624,0,12-5.376,12-12c0-6.628-5.376-12-12-12h-44.212v-16
+                                    H500.424z" />
+                                <image class="home__blob-img" x='6' y='6' href="assets/img/about.png" />
+                            </g>
+                        </svg>
+                    </div>
+                    <a href="#contact" class="contact__me__button-bottom">
+                        Contact me <i class="uil uil-message button__icon"></i>
+                    </a>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section" id="about">
+            <h2 class="section__title">About Me</h2>
+            <span class="section__subtitle">My introduction</span>
+
+            <div class="about__container container grid">
+                <img src="assets/img/" alt="" class="about__img">
+
+                <div class="about__data">
+                    <p class="about__description">
+                        I am a System Analysis and Development student, aspiring to become a native mobile app
+                        developer.
+                        <br><br>
+                        I spend a lot of time on my smartphone and many people also do and as specialists forecast that
+                        we will become more and more dependent on our phones for our daily routines so it only makes
+                        sense to learn how to build apps for our phones which is what I'm currently seeking.
+                        <br><br>
+                        Apart from mobile apps, I like to build discord bots on python and I'm currentlly learning C and
+                        64-bit ARM assembly language so I can better understand how low level programming languages work
+                        as well as to start building emulators in the future.
+                        <br><br>
+                        If you have any FOSS projects you believe I could help or be interested in, feel free to
+                        contact me. I can also help you port them to the Apple ecosystem.
+
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <!--==================== SKILLS ====================-->
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Skills</h2>
+            <span class="section__subtitle">My technical level</span>
+
+            <div class="skills_container container grid">
+                <div>
+                    <!--==================== SKILLS 1 ====================-->
+                    <div class="skills__content skills__open">
+                        <div class="skills__header">
+                            <i class="uil uil-mobile-android skills__icon"></i>
+                            <div>
+                                <h1 class="skills__titles">Mobile Apps</h1>
+                            </div>
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills_name">Native Android apps in Kotlin</h3>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills_name">Native iOS apps in Swift</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--==================== SKILLS 2 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-server-network skills__icon"></i>
+                            <div>
+                                <h1 class="skills__titles">Backend</h1>
+                            </div>
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills_name">Linux Servers</h3>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills_name">Google Compute Engine (Linux Virtual Machines)</h3>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills_name">Google Cloud Firebase</h3>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills_name">Python</h3>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <!--==================== SKILLS 3 ====================-->
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-swatchbook skills__icon"></i>
+                                <div>
+                                    <h1 class="skills__titles">Designing</h1>
+                                </div>
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h2 class="skills_name">I'm capable of creating and editing graphic assets for
+                                            mobile apps</h3>
+                                    </div>
+
+
+                                    <div class="skills__data">
+                                        <div class="skills__titles">
+                                            <h3 class="skills_name">Photoshop - Basic</h3>
+                                        </div>
+                                    </div>
+                                    <div class="skills__data">
+                                        <div class="skills__titles">
+                                            <h3 class="skills_name">GIMP - Basic</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--==================== SKILLS 4 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-desktop skills__icon"></i>
+                            <div>
+                                <h1 class="skills__titles">Others</h1>
+                            </div>
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h2 class="skills_name">I have general knowledge and understanding of the
+                                        following technologies</h3>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills_name">SQL</h3>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills_name">API implementation</h3>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills_name">Java</h3>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills_name">HTML, CSS, Javascript, Flutter</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+        </section>
+
+        <!--==================== QUALIFICATION ====================-->
+        <section class="section qualification__section" id="qualifications">
+            <h2 class="section__title">Qualifications</h2>
+            <span class="section__subtitle">My personal journey</span>
+            <div class="qualification__container container">
+
+                <div class="qualification__sections">
+                    <!--==================== QUALIFICATION CONTENT 1 ====================-->
+                    <div class="qualification__content qualification__active" data-content id="education">
+                        <!--==================== QUALIFICATION 1 ====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Curso Informatica</h3>
+                                <span class="qualification__subtitle">MicroWay - Garça</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2011 - 2012
+                                </div>
+
+                                <br><br>
+                                <h3 class="qualification__title">Curso Técnico de Informática</h3>
+                                <span class="qualification__subtitle">ETEC Monsenhor Antônio Magliano</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2013 - 2014
+                                </div>
+
+                                <br><br>
+                                <h3 class="qualification__title">Curso Superior de Tecnologia em Analise e Desenvolvimento de Sistemas</h3>
+                                <span class="qualification__subtitle">FATEC Garça</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2019 - Present (Conclusion in 2024)
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== SERVICES ====================-->
+        <section class="services section" id="projects">
+            <h2 class="section__title">Projects</h2>
+            <span class="section__subtitle"></span>
+            <div class="services__container container grid">
+                <!--==================== SERVICES 1 ====================-->
+                <div class="services__content">
+
+                    <div>
+                        <i class="uil uil-web-grid services__icon"></i>
+                        <h3 class="services__title">UI/UX <br> designer</h3>
+                    </div>
+
+                    <span class="button button--flex button--small button--link services__button">
+                        View more
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </span>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <h4 class="services__modal-title">Ui/Ux <br> Designer</h4>
+                            <i class="uil uil-times services__modal-close"></i>
+
+                            <ul class="services__modal-services">
+
+                                <li class="services__modal-service">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>I develop the user interface</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>Web page development</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>I create Ux element interactions</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>I position your company brand</p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!--==================== CONTACT ME ====================-->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Contact me</h2>
+            <span class="section__subtitle">Get in touch</span>
+
+            <div class="contact__container container">
+                <div class="contact__grid">
+                    <div class="contact__information">
+                        <a href="mailto:lcoutinholuiz@gmail.com" class="redirect">
+                            <i class="uil-envelope-alt contact__icon"></i>
+                            <div>
+                                <h3 class="contact__title">E-mail me</h3>
+                                <span class="contact__subtitle">lcoutinholuiz@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact__information">
+                    <a href="https://www.linkedin.com/in/leonardocluiz/" target="_blank class=" redirect">
+                        <i class="uil uil-linkedin-alt contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">Linkedin</h3>
+                            <span class="contact__subtitle">Leonardo Luiz</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact__information">
+                <a href="https://github.com/Heart-BreakOne" target="_blank class=" redirect">
+                    <i class="uil uil-github-alt contact__icon"></i>
+                    <div>
+                        <h3 class="contact__title">Github</h3>
+                        <span class="contact__subtitle">Heart-BreakOne</span>
+                </a>
+            </div>
+            </div>
+
+
+            <div class="contact__information">
+                <a href="https://discord.com/users/heartbreakone" target="_blank class=" redirect">
+                    <i class="uil uil-discord contact__icon"></i>
+                    <div>
+                        <h3 class="contact__title">Discord</h3>
+                        <span class="contact__subtitle">HeartBreakOne</span>
+                </a>
+            </div>
+            </div>
+
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <a href="#" class="footer__link">
+                        <h1 class="footer__title">Leonardo&nbsp;Luiz</h1>
+                    </a>
+                    <span class="footer__subtitle">Mobile App Developer</span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="footer__link">About</a>
+                    </li>
+                    <li>
+                        <a href="#skills" class="footer__link">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#qualifications" class="footer__link">Qualifications</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="footer__link">Projects</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+
+                    <a href="https://www.linkedin.com/in/leonardocluiz/" target="_blank" class="footer__social">
+                        <i class="uil uil-linkedin-alt"></i>
+                    </a>
+
+                    <a href="https://github.com/Heart-BreakOne" target="_blank" class="footer__social">
+                        <i class="uil uil-github-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+
+    <!--==================== SWIPER JS ====================-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--==================== MAIN JS ====================-->
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
