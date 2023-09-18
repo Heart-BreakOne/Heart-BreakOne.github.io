@@ -24,6 +24,9 @@
   --title-color: hsl(var(--hue-color), 57.22%, 36.67%, 0.8);
   --text-color: hsl(var(--hue-color), 57.22%, 36.67%, 0.8);
   --text-color-light: hsl(var(--hue-color), 57.22%, 36.67%, 0.4);
+  
+  /*Header color */
+  --header-color: #e9eaf2;
 
   /*THIS COLOR CONTROLS THE FORM COLOR, FIX OR REMOVE IT*/
   --input-color: hsl(var(--hue-color), 57.22%, 36.67%);
@@ -89,6 +92,7 @@ body.dark-theme {
   --container-color: hsl(var(--hue-color), 29%, 16%);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+  --header-color:#161826;
 }
 
 /*========== Button Dark/Light ==========*/
@@ -201,7 +205,8 @@ img {
   bottom: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--body-color);
+  background-color: var(--header-color);
+  
 }
 
 /*==================== NAV ====================*/
@@ -1219,6 +1224,7 @@ img {
   .contact__container,
   .footer__container {
     grid-template-columns: repeat(2, 1fr);
+    display: inherit;
   }
 
   .qualification__sections {
@@ -1374,6 +1380,7 @@ img {
 
   .about__container {
     column-gap: 5rem;
+    display: inherit;
   }
 
   .about__img {
